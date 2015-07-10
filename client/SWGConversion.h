@@ -7,6 +7,9 @@
   
 @interface SWGConversion : SWGObject
 
+/* Identifier for the job conversion. [optional]
+ */
+@property(nonatomic) NSString* _id;
 /* Identifier for the job conversion type. 
  */
 @property(nonatomic) NSString* target;

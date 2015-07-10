@@ -1,8 +1,8 @@
 #import "SWGOutputApi.h"
 #import "SWGFile.h"
 #import "SWGQueryParamCollection.h"
-#import "SWGOutputFile.h"
 #import "SWGError.h"
+#import "SWGOutputFile.h"
 
 
 @interface SWGOutputApi ()
@@ -11,7 +11,7 @@
 
 @implementation SWGOutputApi
 
-static NSString * basePath = @"http://api2.akokine.de";
+static NSString * basePath = @"http://api2.online-convert.com";
 
 #pragma mark - Initialize methods
 
@@ -114,15 +114,13 @@ static NSString * basePath = @"http://api2.akokine.de";
         
         queryParams[@"input_id"] = inputId;
     }
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 
@@ -232,15 +230,13 @@ static NSString * basePath = @"http://api2.akokine.de";
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 
@@ -350,15 +346,13 @@ static NSString * basePath = @"http://api2.akokine.de";
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 

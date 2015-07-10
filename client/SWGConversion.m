@@ -4,12 +4,12 @@
   
 + (JSONKeyMapper *)keyMapper
 {
-  return [[JSONKeyMapper alloc] initWithDictionary:@{ @"target": @"target", @"category": @"category", @"options": @"options" }];
+  return [[JSONKeyMapper alloc] initWithDictionary:@{ @"id": @"_id", @"target": @"target", @"category": @"category", @"options": @"options" }];
 }
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName
 {
-  NSArray *optionalProperties = @[@"category", @"options"];
+  NSArray *optionalProperties = @[@"_id", @"category", @"options"];
 
   if ([optionalProperties containsObject:propertyName]) {
     return YES;

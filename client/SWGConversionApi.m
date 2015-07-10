@@ -1,8 +1,8 @@
 #import "SWGConversionApi.h"
 #import "SWGFile.h"
 #import "SWGQueryParamCollection.h"
-#import "SWGConversion.h"
 #import "SWGError.h"
+#import "SWGConversion.h"
 
 
 @interface SWGConversionApi ()
@@ -11,7 +11,7 @@
 
 @implementation SWGConversionApi
 
-static NSString * basePath = @"http://api2.akokine.de";
+static NSString * basePath = @"http://api2.online-convert.com";
 
 #pragma mark - Initialize methods
 
@@ -102,15 +102,13 @@ static NSString * basePath = @"http://api2.akokine.de";
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 
@@ -219,15 +217,13 @@ static NSString * basePath = @"http://api2.akokine.de";
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 
@@ -360,15 +356,13 @@ static NSString * basePath = @"http://api2.akokine.de";
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 
@@ -478,15 +472,13 @@ static NSString * basePath = @"http://api2.akokine.de";
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
-    if(key != nil) {
-        
-        queryParams[@"key"] = key;
-    }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
     if(token != nil)
         headerParams[@"token"] = token;
+    if(key != nil)
+        headerParams[@"key"] = key;
     
     
     // HTTP header `Accept` 
