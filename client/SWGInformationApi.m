@@ -11,7 +11,7 @@
 
 @implementation SWGInformationApi
 
-static NSString * basePath = @"http://api2.online-convert.com";
+static NSString * basePath = @"http://api2.online-convert.com/";
 
 #pragma mark - Initialize methods
 

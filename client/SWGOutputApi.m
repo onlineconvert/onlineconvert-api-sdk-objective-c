@@ -11,7 +11,7 @@
 
 @implementation SWGOutputApi
 
-static NSString * basePath = @"http://api2.online-convert.com";
+static NSString * basePath = @"http://api2.online-convert.com/";
 
 #pragma mark - Initialize methods
 
@@ -77,15 +77,15 @@ static NSString * basePath = @"http://api2.online-convert.com";
  * 
  * \param conversionId 
  * \param inputId 
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \returns NSArray<SWGOutputFile>*
  */
 -(NSNumber*) jobsJobIdOutputGetWithCompletionBlock: (NSString*) conversionId
          inputId: (NSString*) inputId
-         token: (NSString*) token
-         key: (NSString*) key
+         xOcToken: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
         
         completionHandler: (void (^)(NSArray<SWGOutputFile>* output, NSError* error))completionBlock
@@ -117,10 +117,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 
@@ -197,14 +197,14 @@ static NSString * basePath = @"http://api2.online-convert.com";
 /*!
  * Get information about an output file source.
  * 
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \param fileId Id of the file to download
  * \returns NSArray<SWGOutputFile>*
  */
--(NSNumber*) jobsJobIdOutputFileIdGetWithCompletionBlock: (NSString*) token
-         key: (NSString*) key
+-(NSNumber*) jobsJobIdOutputFileIdGetWithCompletionBlock: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
          fileId: (NSString*) fileId
         
@@ -233,10 +233,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 
@@ -313,14 +313,14 @@ static NSString * basePath = @"http://api2.online-convert.com";
 /*!
  * Deletes a file from the output.
  * 
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \param fileId Id of the file to download
  * \returns NSArray<SWGOutputFile>*
  */
--(NSNumber*) jobsJobIdOutputFileIdDeleteWithCompletionBlock: (NSString*) token
-         key: (NSString*) key
+-(NSNumber*) jobsJobIdOutputFileIdDeleteWithCompletionBlock: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
          fileId: (NSString*) fileId
         
@@ -349,10 +349,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 

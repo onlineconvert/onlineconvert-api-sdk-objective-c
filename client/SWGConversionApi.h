@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "SWGConversion.h"
 #import "SWGError.h"
+#import "SWGConversion.h"
 #import "SWGObject.h"
 #import "SWGApiClient.h"
 
@@ -20,15 +20,15 @@
  Get list of conversions defined for the current job.
  
 
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  
 
  return type: NSArray<SWGConversion>*
  */
--(NSNumber*) jobsJobIdConversionsGetWithCompletionBlock :(NSString*) token 
-     key:(NSString*) key 
+-(NSNumber*) jobsJobIdConversionsGetWithCompletionBlock :(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
     
     completionHandler: (void (^)(NSArray<SWGConversion>* output, NSError* error))completionBlock;
@@ -41,16 +41,16 @@
  
 
  @param body information for the conversion.
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  
 
  return type: SWGConversion*
  */
 -(NSNumber*) jobsJobIdConversionsPostWithCompletionBlock :(SWGConversion*) body 
-     token:(NSString*) token 
-     key:(NSString*) key 
+     xOcToken:(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
     
     completionHandler: (void (^)(SWGConversion* output, NSError* error))completionBlock;
@@ -62,16 +62,16 @@
  Get list of conversions defined for the current job.
  
 
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  @param conversionId Identifier for the job conversion.
  
 
  return type: SWGConversion*
  */
--(NSNumber*) jobsJobIdConversionsConversionIdGetWithCompletionBlock :(NSString*) token 
-     key:(NSString*) key 
+-(NSNumber*) jobsJobIdConversionsConversionIdGetWithCompletionBlock :(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
      conversionId:(NSString*) conversionId 
     
@@ -84,16 +84,16 @@
  Removes the conversion for a job.
  
 
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  @param conversionId Identifier for the job conversion.
  
 
  return type: SWGConversion*
  */
--(NSNumber*) jobsJobIdConversionsConversionIdDeleteWithCompletionBlock :(NSString*) token 
-     key:(NSString*) key 
+-(NSNumber*) jobsJobIdConversionsConversionIdDeleteWithCompletionBlock :(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
      conversionId:(NSString*) conversionId 
     

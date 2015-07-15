@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "SWGOutputFile.h"
 #import "SWGError.h"
+#import "SWGOutputFile.h"
 #import "SWGObject.h"
 #import "SWGApiClient.h"
 
@@ -22,8 +22,8 @@
 
  @param conversionId 
  @param inputId 
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  
 
@@ -31,8 +31,8 @@
  */
 -(NSNumber*) jobsJobIdOutputGetWithCompletionBlock :(NSString*) conversionId 
      inputId:(NSString*) inputId 
-     token:(NSString*) token 
-     key:(NSString*) key 
+     xOcToken:(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
     
     completionHandler: (void (^)(NSArray<SWGOutputFile>* output, NSError* error))completionBlock;
@@ -44,16 +44,16 @@
  Get information about an output file source.
  
 
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  @param fileId Id of the file to download
  
 
  return type: NSArray<SWGOutputFile>*
  */
--(NSNumber*) jobsJobIdOutputFileIdGetWithCompletionBlock :(NSString*) token 
-     key:(NSString*) key 
+-(NSNumber*) jobsJobIdOutputFileIdGetWithCompletionBlock :(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
      fileId:(NSString*) fileId 
     
@@ -66,16 +66,16 @@
  Deletes a file from the output.
  
 
- @param token Token for authentication.
- @param key Api key for the user to filter.
+ @param xOcToken Token for authentication for the current job
+ @param xOcApiKey Api key for the user to filter.
  @param jobId ID of job that needs to be fetched
  @param fileId Id of the file to download
  
 
  return type: NSArray<SWGOutputFile>*
  */
--(NSNumber*) jobsJobIdOutputFileIdDeleteWithCompletionBlock :(NSString*) token 
-     key:(NSString*) key 
+-(NSNumber*) jobsJobIdOutputFileIdDeleteWithCompletionBlock :(NSString*) xOcToken 
+     xOcApiKey:(NSString*) xOcApiKey 
      jobId:(NSString*) jobId 
      fileId:(NSString*) fileId 
     

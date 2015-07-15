@@ -11,7 +11,7 @@
 
 @implementation SWGConversionApi
 
-static NSString * basePath = @"http://api2.online-convert.com";
+static NSString * basePath = @"http://api2.online-convert.com/";
 
 #pragma mark - Initialize methods
 
@@ -75,13 +75,13 @@ static NSString * basePath = @"http://api2.online-convert.com";
 /*!
  * Get list of conversions defined for the current job.
  * 
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \returns NSArray<SWGConversion>*
  */
--(NSNumber*) jobsJobIdConversionsGetWithCompletionBlock: (NSString*) token
-         key: (NSString*) key
+-(NSNumber*) jobsJobIdConversionsGetWithCompletionBlock: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
         
         completionHandler: (void (^)(NSArray<SWGConversion>* output, NSError* error))completionBlock
@@ -105,10 +105,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 
@@ -186,14 +186,14 @@ static NSString * basePath = @"http://api2.online-convert.com";
  * Adds a new conversion to the given job.
  * 
  * \param body information for the conversion.
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \returns SWGConversion*
  */
 -(NSNumber*) jobsJobIdConversionsPostWithCompletionBlock: (SWGConversion*) body
-         token: (NSString*) token
-         key: (NSString*) key
+         xOcToken: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
         
         completionHandler: (void (^)(SWGConversion* output, NSError* error))completionBlock
@@ -220,10 +220,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 
@@ -323,14 +323,14 @@ static NSString * basePath = @"http://api2.online-convert.com";
 /*!
  * Get list of conversions defined for the current job.
  * 
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \param conversionId Identifier for the job conversion.
  * \returns SWGConversion*
  */
--(NSNumber*) jobsJobIdConversionsConversionIdGetWithCompletionBlock: (NSString*) token
-         key: (NSString*) key
+-(NSNumber*) jobsJobIdConversionsConversionIdGetWithCompletionBlock: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
          conversionId: (NSString*) conversionId
         
@@ -359,10 +359,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 
@@ -439,14 +439,14 @@ static NSString * basePath = @"http://api2.online-convert.com";
 /*!
  * Removes the conversion for a job.
  * 
- * \param token Token for authentication.
- * \param key Api key for the user to filter.
+ * \param xOcToken Token for authentication for the current job
+ * \param xOcApiKey Api key for the user to filter.
  * \param jobId ID of job that needs to be fetched
  * \param conversionId Identifier for the job conversion.
  * \returns SWGConversion*
  */
--(NSNumber*) jobsJobIdConversionsConversionIdDeleteWithCompletionBlock: (NSString*) token
-         key: (NSString*) key
+-(NSNumber*) jobsJobIdConversionsConversionIdDeleteWithCompletionBlock: (NSString*) xOcToken
+         xOcApiKey: (NSString*) xOcApiKey
          jobId: (NSString*) jobId
          conversionId: (NSString*) conversionId
         
@@ -475,10 +475,10 @@ static NSString * basePath = @"http://api2.online-convert.com";
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
 
-    if(token != nil)
-        headerParams[@"token"] = token;
-    if(key != nil)
-        headerParams[@"key"] = key;
+    if(xOcToken != nil)
+        headerParams[@"X-Oc-Token"] = xOcToken;
+    if(xOcApiKey != nil)
+        headerParams[@"X-Oc-Api-Key"] = xOcApiKey;
     
     
     // HTTP header `Accept` 

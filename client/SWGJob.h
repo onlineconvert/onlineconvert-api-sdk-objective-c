@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "SWGObject.h"
-#import "SWGStatus.h"
-#import "SWGConversion.h"
 #import "SWGInputFile.h"
+#import "SWGConversion.h"
+#import "SWGStatus.h"
 
 
 @protocol SWGJob
@@ -25,9 +25,6 @@
 /* Determine if the job must be processed as soon as it is ready. [optional]
  */
 @property(nonatomic) BOOL process;
-/* Determine if it is a test job. [optional]
- */
-@property(nonatomic) BOOL test;
 /* Type of conversion or conversions to be carried out. [optional]
  */
 @property(nonatomic) NSArray<SWGConversion>* conversion;
